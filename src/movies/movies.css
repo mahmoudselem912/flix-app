@@ -1,0 +1,27 @@
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.heading {
+  padding-left: 10px;
+}
+
+.search {
+  justify-content: end;
+  -webkit-appearance: none;
+  padding: 12px 15px;
+  border: 1px solid #e7e7e7;
+  outline: none;
+  width: 200px;
+  line-height: 30px;
+  border-radius: 5px;
+  transition: border 0.3s;
+  margin-right: 10px;
+}
+
+.search:focus {
+  border: 1px solid #28b9b5;
+}
