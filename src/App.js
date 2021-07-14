@@ -1,9 +1,10 @@
+import React from "react";
 import "./App.css";
-import Movies from "./movies/movies";
+import HomePage from "./homePage/homePage";
 function App() {
   return (
     <div>
-      <Movies />
+      <HomePage />
     </div>
   );
 }

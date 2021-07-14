@@ -33,10 +33,19 @@
   border: 1px solid white;
 }
 
-.popular-movies {
+.trending-movies {
   margin-top: 100px;
 }
 
+.trending {
+  color: white;
+}
 .popular {
   color: white;
+}
+.popular-shows {
+  margin-top: 90px;
+}
+.searching-result {
+  margin-top: 90px;
 }
