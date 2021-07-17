@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import axios from "axios";
 import "./homePage.css";
 import Carousel from "react-multi-carousel";
@@ -6,6 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 import TrendingMovies from "../trendingMovies/trendingMovies";
 import PopularShows from "../popular TV shows/TVShows";
 import DisplaySearch from "../displaySearch/displaySearch";
+import debounce from "lodash.debounce";
 
 const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState();
@@ -32,6 +33,7 @@ const HomePage = () => {
       items: 1,
     },
   };
+
   React.useEffect(() => {
     axios
       .get(
@@ -71,11 +73,12 @@ const HomePage = () => {
         console.log(error);
       });
   }, [displaySearch]);
+
   function handleChange(event) {
     setDispalySearch(event.target.value);
   }
 
-  if (!trendingMovies || !popularShows || !searchResult) {
+  if (!trendingMovies || !popularShows) {
     return <div>loading ...</div>;
   }
 
